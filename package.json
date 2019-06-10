@@ -1,0 +1,16 @@
+{
+  "name": "cmc",
+  "version": "1.0.0",
+  "description": "shows the price of a given coin",
+  "main": "sample.js",
+  "scripts": {
+    "start": "node sample.js"
+  },
+  "author": "incredulous",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-coinmarketcap": "^0.2.0",
+    "stocks.js": "0.0.17"
+  }
+}
