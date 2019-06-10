@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Price</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link
+    rel="stylesheet"
+    href="https://bootswatch.com/4/journal/bootstrap.min.css"
+  />
+</head>
+<body>
+    <div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i> Stock Price</h1>
+        <form action="/" method="POST">
+            <div class="form-group">
+            <label for="email">Stock Ticker</label>
+            <input
+                type="text"
+                id="stock"
+                name="stock"
+                class="form-control"
+                placeholder="Enter Stock Ticker"
+            />
+            </div>
+            <button type="submit" ondblclick="alert()" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

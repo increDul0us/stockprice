@@ -5,15 +5,21 @@ var stocks = new Stocks('CFV60N2I3D2IB4YF')
 const app = express()
 const port = process.env.PORT || 3000
 
-app.get('/:id', async function (req, res) {
+app.use(express.urlencoded({ extended: true }))
+
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/index.html')
+})
+
+app.post('/', async function (req, res) {
   try {
     const stock = {
-      symbol: req.params.id,
+      symbol: req.body.stock,
       interval: '1min',
       amount: 1
     }
     const result = await stocks.timeSeries(stock)
-    res.json(stock.symbol + ': ' + result[0].close)
+    res.send(stock.symbol + ': ' + result[0].close)
     console.log(result)
   } catch (result) {
     console.log(result)
