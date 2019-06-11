@@ -19,10 +19,12 @@ app.post('/', async function (req, res) {
       amount: 1
     }
     const result = await stocks.timeSeries(stock)
-    res.send(stock.symbol + ': ' + result[0].close)
+    if (!result) { res.send('stock not found') }
+    res.send(stock.symbol + ': $' + result[0].close)
     console.log(result)
-  } catch (result) {
-    console.log(result)
+  } catch (error) {
+    res.send('stock not found')
+    console.log(error)
   }
 })
 
