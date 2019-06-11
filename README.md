@@ -10,3 +10,7 @@ Run the server
 ```sh
 npm start
 ```
+Run with docker
+```sh
+docker pull incredul0us/stockprice
+```
